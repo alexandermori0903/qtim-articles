@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "TTCommons";
+  font-style: normal;
+  font-weight: 100;
+  src: url("/fonts/TT Commons/TT Commons Thin.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: italic;
+  font-weight: 100;
+  src: url("/fonts/TT Commons/TT Commons Thin Italic.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/TT Commons/TT Commons Regular.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/TT Commons/TT Commons Medium.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: italic;
+  font-weight: 500;
+  src: url("/fonts/TT Commons/TT Commons Medium Italic.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/TT Commons/TT Commons Light.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: italic;
+  font-weight: 300;
+  src: url("/fonts/TT Commons/TT Commons Light Italic.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/TT Commons/TT Commons Italic.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: normal;
+  font-weight: 200;
+  src: url("/fonts/TT Commons/TT Commons ExtraLight.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: italic;
+  font-weight: 200;
+  src: url("/fonts/TT Commons/TT Commons ExtraLight Italic.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/TT Commons/TT Commons ExtraBold.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: italic;
+  font-weight: 800;
+  src: url("/fonts/TT Commons/TT Commons ExtraBold Italic.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/TT Commons/TT Commons DemiBold.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: italic;
+  font-weight: 600;
+  src: url("/fonts/TT Commons/TT Commons DemiBold Italic.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/TT Commons/TT Commons Bold.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/fonts/TT Commons/TT Commons Bold Itailc.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/TT Commons/TT Commons Black.otf") format("otf");
+}
+@font-face {
+  font-family: "TTCommons";
+  font-style: italic;
+  font-weight: 900;
+  src: url("/fonts/TT Commons/TT Commons Black Italic.otf") format("otf");
+}
+
+@layer base {
+  * {
+    @apply font-ttcommons;
+  }
+}
