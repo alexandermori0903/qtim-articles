@@ -5,7 +5,8 @@
   </main>
   <AppFooter />
 </template>
-<style>
+
+<style scoped>
 main {
   @apply container mx-auto max-w-[1360px] px-[72px];
 }

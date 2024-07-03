@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   currentPage: Number,
   pageCount: Number,
 });
@@ -27,7 +27,7 @@ const emit = defineEmits(["onClickPage", "onClickNext"]);
   </div>
 </template>
 
-<style>
+<style scoped>
 .paginator-item {
   @apply rounded-xl h-11 w-11 flex items-center justify-center transition-all text-dark-500 cursor-pointer bg-dark-200;
 }

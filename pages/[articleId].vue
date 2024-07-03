@@ -1,13 +1,24 @@
 <script setup lang="ts">
+import { getArticleById } from "../server/article.service";
+import type { IArticle } from "../interfaces";
+
 const route = useRoute();
-const config = useRuntimeConfig();
 const articleId = ref<string>(route.params.articleId);
-const { data: article } = await useFetch(
-  `${config.public.apiBase}/qtim-test-work/posts/${articleId.value}`
-);
+
+const article = ref<IArticle>();
+
+onMounted(() => {
+  getArticleById(articleId.value).then(({ data }) => {
+    article.value = data;
+  }).catch(() => {
+    window.alert('API Error');
+  })
+});
+
 const onError = (event) => {
   event.target.src = "/images/no_img.png";
 };
+
 </script>
 <template>
   <div class="pt-[120px] pb-[80px]">

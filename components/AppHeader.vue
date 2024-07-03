@@ -36,7 +36,7 @@ const menus = ref<IMenu[]>([
   </header>
 </template>
 
-<style>
+<style scoped>
 header {
   @apply container mx-auto max-w-[1440px] flex items-center justify-between h-[121px] px-10;
 }

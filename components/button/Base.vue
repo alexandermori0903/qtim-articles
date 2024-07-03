@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   label: String,
 });
 const emit = defineEmits(["onClickEvent"]);
@@ -11,7 +11,7 @@ const emit = defineEmits(["onClickEvent"]);
   </div>
 </template>
 
-<style>
+<style scoped>
 .btn-base {
   @apply text-white text-xl h-[52px] px-8 flex items-center bg-dark-500 cursor-pointer rounded-[999px] hover:bg-dark-300 transition-all;
 }

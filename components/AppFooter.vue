@@ -12,6 +12,7 @@ const menus = ref<IMenu[]>([
   { title: "Privacy Policy", url: "/" },
 ]);
 </script>
+
 <template>
   <footer>
     <div class="footer-main">
@@ -70,7 +71,8 @@ const menus = ref<IMenu[]>([
     </div>
   </footer>
 </template>
-<style>
+
+<style scoped>
 footer {
   @apply bg-main-300 overflow-hidden;
 }

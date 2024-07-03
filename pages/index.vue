@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { getArticles } from "../server/article.service";
+import type { IArticle } from "../interfaces";
+
 interface IArticle {
   id: string;
   createdAt: string;
@@ -8,21 +11,27 @@ interface IArticle {
   description: string;
 }
 
-const config = useRuntimeConfig();
-const { data: articles } = await useFetch(
-  `${config.public.apiBase}/qtim-test-work/posts/`
-);
+const COUNT_PER_PAGE = 8;
+
+const articles = ref<IArticle[]>([]);
+const showArticles = ref<IArticle[]>([]);
+const pageCount = ref<number>(0);
+
+onMounted(() => {
+  getArticles().then(({ data }) => {
+    articles.value = data;
+    showArticles.value = data.slice(0, COUNT_PER_PAGE);
+    pageCount.value = Math.ceil(articles.value.length / COUNT_PER_PAGE);
+  }).catch(() => {
+    window.alert('API error')
+  });
+});
+
 const currentPage = ref<number>(1);
-const pageCount = ref<number>(
-  Math.ceil(articles.value.length / config.public.articlesCountPerPage)
-);
-const showArticles = ref<IArticle[]>(
-  articles.value.slice(0, config.public.articlesCountPerPage)
-);
 watch(currentPage, (newCurrentPage) => {
   showArticles.value = articles.value.slice(
-    (newCurrentPage - 1) * config.public.articlesCountPerPage,
-    newCurrentPage * config.public.articlesCountPerPage
+    (newCurrentPage - 1) * COUNT_PER_PAGE,
+    newCurrentPage * COUNT_PER_PAGE
   );
 });
 </script>
